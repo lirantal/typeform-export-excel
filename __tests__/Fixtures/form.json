@@ -1,0 +1,88 @@
+{
+    "id": "Peoi631d",
+    "title": "The best form ever",
+    "workspace": {
+      "href": "https://api.typeform.com/workspaces/4241131"
+    },
+    "fields": {
+        "c2c41c1c2-c1c1-c33c-8a8a-8aa98a9c87e": {
+        "id": "Jd5qIzWvTrOX",
+        "title": "Question 1?",
+        "ref": "c2c41c1c2-c1c1-c33c-8a8a-8aa98a9c87e",
+        "type": "yes_no",
+        "answers": {
+          "yes": [
+            {
+              "response_id": "cb81b8c1b8bc9bx1c13c13",
+              "submitted_at": "2018-10-19T12:56:33Z",
+              "metadata": {
+                "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+                "platform": "other",
+                "referer": "https://example.typeform.com/to/Peoi631d",
+                "network_id": "v3v2v1c1c1",
+                "browser": "default"
+              }
+            },
+            {           
+                "response_id": "2c23c1c23c13c23c1c1c13",
+                "submitted_at": "2018-10-19T21:40:16Z",
+                "metadata": {
+                  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+                  "platform": "other",
+                  "referer": "https://example.typeform.com/to/Peoi631d",
+                  "network_id": "v3v2v1c1c1",
+                  "browser": "default"
+                }
+              }
+            ],
+            "no": [
+            ]
+        },
+        "totalRespondents": 2
+    },
+    "c2c41c1c2-c1c1-c33c-8a8a-8aa98a9c871": {
+        "id": "RQdFHCQJILlX",
+        "title": "Question 2?",
+        "ref": "c2c41c1c2-c1c1-c33c-8a8a-8aa98a9c871",
+        "type": "opinion_scale",
+        "properties": {
+          "steps": 2,
+          "start_at_one": false,
+          "labels": {
+            "left": "Not knowledgeable",
+            "right": "Extremely knowledgeable"
+          }
+        },
+        "answers": {
+          "0": [
+            {
+              "response_id": "c2c23c23c23c23c23c3",
+              "submitted_at": "2018-10-23T15:07:18Z",
+              "metadata": {
+                "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+                "platform": "other",
+                "referer": "https://example.typeform.com/to/Peoi631d",
+                "network_id": "v3v2v1c1c1",
+                "browser": "default"
+              }
+            }
+          ],
+          "1": [
+              {
+                "response_id": "c2c23c23c23c23c23c3",
+                "submitted_at": "2018-10-23T15:07:18Z",
+                "metadata": {
+                  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
+                  "platform": "other",
+                  "referer": "https://example.typeform.com/to/Peoi631d",
+                  "network_id": "v3v2v1c1c1",
+                  "browser": "default"
+                }
+              }
+          ]
+        },
+        "totalRespondents": 2
+    }
+},
+"totalRespondents": 2
+}

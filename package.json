@@ -1,0 +1,210 @@
+{
+  "name": "typeform-export-excel",
+  "version": "0.0.0-development",
+  "description": "Export a Typeform survey questionnaire to an Excel format",
+  "main": "index.js",
+  "bin": {
+    "typeform-export-excel": "./bin/cli.js"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier-standard '**/*.js'",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage:view": "opn coverage/lcov-report/index.html",
+    "commit": "git-cz",
+    "docs": "npm run docs:code && npm run docs:api",
+    "docs:api": "doxdox *.js --layout bootstrap --output docs/index.html",
+    "docs:code": "docco *.js --output docs/code",
+    "semantic-release": "semantic-release"
+  },
+  "author": {
+    "name": "Liran Tal",
+    "email": "liran@snyk.io",
+    "url": "https://github.com/lirantal"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "typeform",
+    "excel",
+    "xls",
+    "xlsx",
+    "csv",
+    "export",
+    "client",
+    "api",
+    "survey"
+  ],
+  "homepage": "https://github.com/lirantal/typeform-export-excel",
+  "bugs": {
+    "url": "https://github.com/lirantal/typeform-export-excel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lirantal/typeform-export-excel.git"
+  },
+  "dependencies": {
+    "@lirantal/typeform-client": "^1.0.1",
+    "arg": "^3.0.0",
+    "debug": "^4.1.1",
+    "exceljs": "^1.6.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-strict-mode": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "commitizen": "^3.0.5",
+    "cz-conventional-changelog": "^2.1.0",
+    "docco": "^0.8.0",
+    "doxdox": "^2.0.1",
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.2.1",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.1.0",
+    "opn-cli": "^4.0.0",
+    "prettier-standard": "^8.0.1",
+    "semantic-release": "^15.13.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "notify": true,
+    "collectCoverage": false,
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "testPathIgnorePatterns": [
+      "/__tests__/.*/__fixtures__/.*"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/__tests__/.*/__fixtures__/.*",
+      "/__tests__/.*/__snapshots__/.*"
+    ],
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "post-merge": "npm install",
+      "pre-push": "npm run lint && npm run test"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./app/node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/out/"
+    ]
+  },
+  "eslintIgnore": [
+    "coverage/**"
+  ],
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "plugins": [
+      "import",
+      "standard",
+      "node",
+      "security",
+      "jest"
+    ],
+    "extends": [
+      "standard",
+      "plugin:node/recommended"
+    ],
+    "rules": {
+      "no-process-exit": "warn",
+      "jest/no-disabled-tests": "error",
+      "jest/no-focused-tests": "error",
+      "jest/no-identical-title": "error",
+      "node/no-unsupported-features": "off",
+      "node/no-unpublished-require": "off",
+      "security/detect-non-literal-fs-filename": "error",
+      "security/detect-unsafe-regex": "error",
+      "security/detect-buffer-noassert": "error",
+      "security/detect-child-process": "error",
+      "security/detect-disable-mustache-escape": "error",
+      "security/detect-eval-with-expression": "error",
+      "security/detect-no-csrf-before-method-override": "error",
+      "security/detect-non-literal-regexp": "error",
+      "security/detect-object-injection": "warn",
+      "security/detect-possible-timing-attacks": "error",
+      "security/detect-pseudoRandomBytes": "error",
+      "space-before-function-paren": "off",
+      "object-curly-spacing": "off"
+    },
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "ecmaFeatures": {
+        "impliedStrict": true
+      }
+    }
+  },
+  "release": {
+    "branch": "master",
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [
+        {
+          "type": "docs",
+          "release": "patch"
+        },
+        {
+          "type": "refactor",
+          "release": "patch"
+        },
+        {
+          "type": "style",
+          "release": "patch"
+        }
+      ]
+    }
+  }
+}
