@@ -41,6 +41,11 @@
       alt="Security Responsible Disclosure"/></a>
 </p>
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/316371/50742434-ca58b300-1213-11e9-866a-b2508e48edff.png" />
+</p>
+
+
 # About
 
 This library exports a Typeform survey to an already aggregated results Excel file, and includes a tiny CLI helper to do this from command-line
