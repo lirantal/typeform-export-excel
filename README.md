@@ -102,6 +102,14 @@ typeformToExcel
 
 Once installed, a binary named `typeform-export-excel` will be available on the path.
 
+The following is supported command line arguments:
+
+| Option Name | Option Value | Description  |
+|-------------|--------------|--------------|
+| --apiKey    | 1234         | typeform's api key, for example: `--apiKey 1234` |
+| --formId    | Pdi981       | the relevant form id, usually shows up in the URL, for example: `--formId Pdi981` |
+| --filename  | out.xlsx     | the filename to create and write to, for example: `--filename out.xlsx` |
+
 Example:
 
 ```bash
