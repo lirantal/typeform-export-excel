@@ -1,8 +1,23 @@
-[![Security Responsible Disclosure](https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg)](https://github.com/nodejs/security-wg/blob/master/processes/responsible_disclosure_template.md)
+<p align="center"><h1 align="center">
+  typeform-export-excel
+</h1>
+
+<p align="center">
+  Export a Typeform survey questionnaire to an Excel format
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.org/package/typeform-export-excel"><img src="https://badgen.net/npm/v/typeform-export-excel"alt="npm version"/></a>
+  <a href="https://www.npmjs.org/package/typeform-export-excel"><img src="https://badgen.net/npm/license/typeform-export-excel"alt="license"/></a>
+  <a href="https://www.npmjs.org/package/typeform-export-excel"><img src="https://badgen.net/npm/dt/typeform-export-excel"alt="downloads"/></a>
+  <a href="https://travis-ci.org/lirantal/typeform-export-excel"><img src="https://badgen.net/travis/lirantal/typeform-export-excel" alt="build"/></a>
+  <a href="https://github.com/saojs/awesome-sao"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"/></a>
+  <a href="https://snyk.io/test/github/lirantal/typeform-export-excel"><img src="https://snyk.io/test/github/lirantal/typeform-export-excel/badge.svg" alt="Known Vulnerabilities"/></a>
+</p>
 
 # About
 
-This library exports a Typeform survey to an already aggregated results Excel file, and includes a tiny CLI helper to do this from command-line
+This library exports a Typeform survey to an Excel file with already aggregated results for all questions and their answers, and includes a tiny CLI helper to do this from command-line.
 
 Benefits over Typeform's CSV export:
 
@@ -10,7 +25,7 @@ Benefits over Typeform's CSV export:
 - **De-normalized**: Each question has all the aggregated answers counts already present in the worksheet in an organized manner.
 - **Graph-ready**: Data points are presented in a table structure allowing you to easily create a graph out of it.
 
-## Installation
+## Install
 
 ```bash
 npm install typeform-export-excel
@@ -62,34 +77,14 @@ Example:
 $ typeform-export-excel --apiKey 1234 --formId Pdi981 --filename survey-results.xlsx --author Liran
 ```
 
-## Tests
+# Related
 
-Project tests:
+- [typeform-client](https://github.com/lirantal/typeform-client)
 
-```bash
-npm run test
-```
+# Contributing
 
-Project linting:
+Please consult [CONTIRBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
 
-```bash
-npm run lint
-```
+# Author
 
-## Coverage
-
-```bash
-npm run test:coverage
-```
-
-## Contributing
-
-### Commit Guidelines
-
-The project uses the commitizen tool for standardizing changelog style commit
-messages so you should follow it as so:
-
-```bash
-git add .           # add files to staging
-npm run commit      # use the wizard for the commit message
-```
+**typeform-export-excel** © [Liran Tal](https://github.com/lirantal), Released under the [Apache-2.0](./LICENSE) License.<br>
