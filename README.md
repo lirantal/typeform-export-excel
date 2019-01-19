@@ -15,6 +15,10 @@
   <a href="https://github.com/nodejs/security-wg/blob/master/processes/responsible_disclosure_template.md"><img src="https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg" alt="Security Responsible Disclosure"/></a>
 </p>
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/316371/50742434-ca58b300-1213-11e9-866a-b2508e48edff.png" />
+</p>
+
 # About
 
 This library exports a Typeform survey to an Excel file with already aggregated results for all questions and their answers, and includes a tiny CLI helper to do this from command-line.
@@ -95,4 +99,4 @@ Please consult [CONTIRBUTING](./CONTRIBUTING.md) for guidelines on contributing 
 
 # Author
 
-**typeform-export-excel** © [Liran Tal](https://github.com/lirantal), Released under the [Apache-2.0](./LICENSE) License.<br>
+**typeform-export-excel** © [Liran Tal](https://github.com/lirantal), Released under the [Apache-2.0](./LICENSE) License.
