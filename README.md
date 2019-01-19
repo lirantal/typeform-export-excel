@@ -14,7 +14,6 @@
   <a href="https://snyk.io/test/github/lirantal/typeform-export-excel"><img src="https://snyk.io/test/github/lirantal/typeform-export-excel/badge.svg" alt="Known Vulnerabilities"/></a>
   <a href="https://github.com/nodejs/security-wg/blob/master/processes/responsible_disclosure_template.md"><img src="https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg" alt="Security Responsible Disclosure"/></a>
 </p>
-</p>
 
 # About
 
@@ -72,6 +71,14 @@ typeformToExcel
 
 Once installed, a binary named `typeform-export-excel` will be available on the path.
 
+The following is supported command line arguments:
+
+| Option Name | Option Value | Description                                                                       |
+| ----------- | ------------ | --------------------------------------------------------------------------------- |
+| --apiKey    | 1234         | typeform's api key, for example: `--apiKey 1234`                                  |
+| --formId    | Pdi981       | the relevant form id, usually shows up in the URL, for example: `--formId Pdi981` |
+| --filename  | out.xlsx     | the filename to create and write to, for example: `--filename out.xlsx`           |
+
 Example:
 
 ```bash
@@ -80,7 +87,7 @@ $ typeform-export-excel --apiKey 1234 --formId Pdi981 --filename survey-results.
 
 # Related
 
-- [typeform-client](https://github.com/lirantal/typeform-client)
+[@lirantal/typeform-client](https://github.com/lirantal/typeform-client) - A friendlier Typeform Node.js API client
 
 # Contributing
 
