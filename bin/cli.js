@@ -17,10 +17,10 @@ const args = arg({
   '-f': '--filename'
 })
 
-const apiKey = args['--apiKey'] || process.env.TYPEFORM_API_KEY
+const apiKey = args['--apiKey'] || process.env.TYPEFORM_API_KEY || ''
 debug(`parsed apiKey: ${apiKey.substr(0, 5)}`)
 
-const formId = args['--formId'] || process.env.TYPEFORM_FORM_ID
+const formId = args['--formId'] || process.env.TYPEFORM_FORM_ID || ''
 debug(`parsed formId: ${formId}`)
 
 const fileName = args['--filename'] || 'typeform-export-excel.xlsx'

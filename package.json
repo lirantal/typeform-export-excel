@@ -48,7 +48,7 @@
     "url": "https://github.com/lirantal/typeform-export-excel.git"
   },
   "dependencies": {
-    "@lirantal/typeform-client": "^1.0.1",
+    "@lirantal/typeform-client": "^1.0.5",
     "arg": "^3.0.0",
     "debug": "^4.1.1",
     "exceljs": "^1.6.3"
