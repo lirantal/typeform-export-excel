@@ -20,7 +20,9 @@
     "docs": "npm run docs:code && npm run docs:api",
     "docs:api": "doxdox *.js --layout bootstrap --output docs/index.html",
     "docs:code": "docco *.js --output docs/code",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": {
     "name": "Liran Tal",
@@ -51,7 +53,8 @@
     "@lirantal/typeform-client": "^1.0.5",
     "arg": "^3.0.0",
     "debug": "^4.1.1",
-    "exceljs": "^1.6.3"
+    "exceljs": "^1.6.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
@@ -206,5 +209,6 @@
         }
       ]
     }
-  }
+  },
+  "snyk": true
 }
