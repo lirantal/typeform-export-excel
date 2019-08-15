@@ -51,7 +51,7 @@
     "@lirantal/typeform-client": "^1.0.5",
     "arg": "^3.0.0",
     "debug": "^4.1.1",
-    "exceljs": "^1.6.3"
+    "exceljs": "^1.14.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
