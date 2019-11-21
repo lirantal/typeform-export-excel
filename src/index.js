@@ -75,14 +75,29 @@ module.exports = class TypeformExportExcel {
   }
 
   _createSingleWorksheet({questionData}) {
-    const worksheetName = this._getWorksheetName(questionData)
-    const worksheet = this.workbook.addWorksheet(worksheetName, {
-      properties: {
-        tabColor: {
-          argb: this._getWorksheetColor()
+    let worksheetName = this._getWorksheetName(questionData)
+    let worksheet
+    try {
+      worksheet = this.workbook.addWorksheet(worksheetName, {
+        properties: {
+          tabColor: {
+            argb: this._getWorksheetColor()
+          }
         }
+      })
+    } catch (error) {
+      if (error.message.match('Worksheet name already exists')) {
+        worksheetName = `${Date.now()}-${Math.floor(Math.random() * 1000000)}`
+
+        worksheet = this.workbook.addWorksheet(worksheetName, {
+          properties: {
+            tabColor: {
+              argb: this._getWorksheetColor()
+            }
+          }
+        })
       }
-    })
+    }
 
     this._populateWorksheetHeaders(worksheet, questionData)
     this._populateWorksheetMetadata(worksheet, questionData)
