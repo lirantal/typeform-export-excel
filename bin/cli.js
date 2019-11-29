@@ -11,6 +11,7 @@ const args = arg({
   '--apiKey': String,
   '--formId': String,
   '--filename': String,
+  '--dated': Boolean,
   '--author': String,
   '-v': '--version',
   '-h': '--help',
@@ -24,6 +25,9 @@ const formId = args['--formId'] || process.env.TYPEFORM_FORM_ID || ''
 debug(`parsed formId: ${formId}`)
 
 const fileName = args['--filename'] || 'typeform-export-excel.xlsx'
+debug(`parsed filename: ${fileName}`)
+
+const isDated = args['--dated']
 debug(`parsed filename: ${fileName}`)
 
 if (!apiKey || !formId) {
@@ -44,7 +48,8 @@ typeformToExcel
   .createWorkbookFromForm(formId)
   .then(() => {
     return typeformToExcel.writeToFile({
-      filename: fileName
+      filename: fileName,
+      isDated: isDated
     })
   })
   .then(() => {
