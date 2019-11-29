@@ -4,6 +4,7 @@ const Excel = require('exceljs')
 const debug = require('debug')('typeform-export-excel')
 const {Form} = require('@lirantal/typeform-client')
 const {HEADER_NAME, HEADER_WIDTH, HEADER_STYLE, WORKSHEET_COLOR} = require('./constants')
+const utils = require('./utils')
 
 const WORKSHEET_NAME_CHAR_LIMIT = 64
 
@@ -232,13 +233,22 @@ module.exports = class TypeformExportExcel {
     })
   }
 
-  async writeToFile({filename}) {
+  async writeToFile({filename, isDated}) {
     try {
+      const finalFileName = isDated ? this._addDateInFileName(filename, new Date()) : filename
       // eslint-disable-next-line
-      await this.workbook.xlsx.writeFile(filename)
+      await this.workbook.xlsx.writeFile(finalFileName)
     } catch (err) {
       debug(err)
       throw err
     }
+  }
+
+  _addDateInFileName(filename, date) {
+    return utils.insertString(
+      filename,
+      '_' + utils.getFormattedDate(date, 'YYYY-MM-DD--HH-mm-ss'),
+      filename.lastIndexOf('.')
+    )
   }
 }

@@ -45,4 +45,46 @@ describe('E2E Export to Excel', () => {
       fs.unlinkSync(testOutputFilename)
     }
   })
+
+  test('Creating an Excel file with date in filename', async () => {
+    expect.assertions(1)
+
+    const testOutputFilename = 'test-out.xlsx'
+    const expectedTestOutputFilename = 'test-out_2016-06-20--03-08-10.xlsx'
+    const RealDate = Date
+    const mockDate = new Date(2016, 5, 20, 3, 8, 10)
+
+    global.Date = class extends RealDate {
+      constructor() {
+        return new RealDate(mockDate)
+      }
+    }
+
+    Form.prototype.fetchFormResponses = jest.fn(() => mockForm)
+
+    const typeformToExcel = new TypeformExportExcel({
+      credentials: {
+        apiKey: mockApiKey
+      },
+      workbookConfig: {
+        creator: 'Creator',
+        date: new Date()
+      }
+    })
+
+    await typeformToExcel.createWorkbookFromForm(mockForm.id)
+
+    await typeformToExcel.writeToFile({
+      filename: testOutputFilename,
+      isDated: true
+    })
+
+    // eslint-disable-next-line
+    const isFileExist = fs.existsSync(path.resolve(expectedTestOutputFilename))
+    expect(isFileExist).toBeTruthy()
+
+    global.Date = RealDate
+    // eslint-disable-next-line
+    fs.unlinkSync(expectedTestOutputFilename)
+  })
 })
