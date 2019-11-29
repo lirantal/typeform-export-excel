@@ -59,7 +59,8 @@ typeformToExcel
   .createWorkbookFromForm(formId)
   .then(() => {
     return typeformToExcel.writeToFile({
-      filename: 'out.xlsx'
+      filename: 'out.xlsx',
+      isDated: true
     })
   })
   .then(() => {
@@ -82,6 +83,8 @@ The following is supported command line arguments:
 | --apiKey    | 1234         | typeform's api key, for example: `--apiKey 1234`                                  |
 | --formId    | Pdi981       | the relevant form id, usually shows up in the URL, for example: `--formId Pdi981` |
 | --filename  | out.xlsx     | the filename to create and write to, for example: `--filename out.xlsx`           |
+| --dated     |              | (optional) the argument for adding export date to filename, for example: `--dated`|
+
 
 Example:
 
