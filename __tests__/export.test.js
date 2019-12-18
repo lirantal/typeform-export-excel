@@ -9,6 +9,16 @@ const TypeformExportExcel = require(path.resolve('./src/index.js'))
 const mockForm = require('./Fixtures/form.json')
 const mockApiKey = 1234
 
+const tempDir = fs.mkdtempSync('temp')
+
+afterAll(() => {
+  /* eslint-disable security/detect-non-literal-fs-filename */
+  fs.readdirSync(path.resolve(tempDir)).forEach(file => {
+    fs.unlinkSync(path.resolve(tempDir, file))
+  })
+  fs.rmdirSync(path.resolve(tempDir))
+})
+
 describe('E2E Export to Excel', () => {
   test('Creating an Excel file from form matches previous sample file', async () => {
     expect.assertions(1)
@@ -27,30 +37,25 @@ describe('E2E Export to Excel', () => {
 
     await typeformToExcel.createWorkbookFromForm(mockForm.id)
 
-    const testOutputFilename = 'test-out.xlsx'
+    const testOutputFilename = path.join(tempDir, 'test-out.xlsx')
+
     await typeformToExcel.writeToFile({
       filename: testOutputFilename
     })
 
-    try {
-      // eslint-disable-next-line
-      const actual = fs.statSync(path.resolve('./__tests__/Fixtures/sample.xlsx'))
-      // eslint-disable-next-line
-      const expected = fs.statSync(path.resolve(testOutputFilename))
-
-      expect(expected.size).toEqual(actual.size)
-    } catch (e) {
-    } finally {
-      // eslint-disable-next-line
-      fs.unlinkSync(testOutputFilename)
-    }
+    // eslint-disable-next-line
+    const actual = fs.statSync(path.resolve('./__tests__/Fixtures/sample.xlsx'))
+    // eslint-disable-next-line
+    const expected = fs.statSync(path.resolve(testOutputFilename))
+    expect(expected.size).toEqual(actual.size)
   })
 
   test('Creating an Excel file with date in filename', async () => {
     expect.assertions(1)
 
-    const testOutputFilename = 'test-out.xlsx'
-    const expectedTestOutputFilename = 'test-out_2016-06-20--03-08-10.xlsx'
+    const testOutputFilename = path.join(tempDir, 'test-out.xlsx')
+    const expectedTestOutputFilename = path.join(tempDir, 'test-out_2016-06-20--03-08-10.xlsx')
+
     const RealDate = Date
     const mockDate = new Date(2016, 5, 20, 3, 8, 10)
 
@@ -84,7 +89,5 @@ describe('E2E Export to Excel', () => {
     expect(isFileExist).toBeTruthy()
 
     global.Date = RealDate
-    // eslint-disable-next-line
-    fs.unlinkSync(expectedTestOutputFilename)
   })
 })
