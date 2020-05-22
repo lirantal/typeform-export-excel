@@ -52,7 +52,7 @@
     "arg": "^4.1.3",
     "debug": "^4.1.1",
     "exceljs": "^3.9.0",
-    "moment": "^2.24.0"
+    "moment": "^2.25.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
