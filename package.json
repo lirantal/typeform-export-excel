@@ -50,7 +50,7 @@
   "dependencies": {
     "@lirantal/typeform-client": "^1.2.5",
     "arg": "^4.1.3",
-    "debug": "^4.3.3",
+    "debug": "^4.3.4",
     "exceljs": "^3.10.0",
     "moment": "^2.24.0"
   },
