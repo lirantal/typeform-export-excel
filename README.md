@@ -11,7 +11,6 @@
   <a href="https://www.npmjs.org/package/typeform-export-excel"><img src="https://badgen.net/npm/license/typeform-export-excel"alt="license"/></a>
   <a href="https://www.npmjs.org/package/typeform-export-excel"><img src="https://badgen.net/npm/dt/typeform-export-excel"alt="downloads"/></a>
   <a href="https://travis-ci.org/lirantal/typeform-export-excel"><img src="https://badgen.net/travis/lirantal/typeform-export-excel" alt="build"/></a>
-  <a href="https://snyk.io/test/github/lirantal/typeform-export-excel"><img src="https://snyk.io/test/github/lirantal/typeform-export-excel/badge.svg" alt="Known Vulnerabilities"/></a>
   <a href="https://github.com/nodejs/security-wg/blob/master/processes/responsible_disclosure_template.md"><img src="https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg" alt="Security Responsible Disclosure"/></a>
 </p>
 
