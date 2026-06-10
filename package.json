@@ -1,4 +1,8 @@
 {
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
   "name": "typeform-export-excel",
   "version": "0.0.0-development",
   "description": "Export a Typeform survey questionnaire to an Excel format",
