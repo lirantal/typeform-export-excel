@@ -102,3 +102,7 @@ Please consult [CONTIRBUTING](./CONTRIBUTING.md) for guidelines on contributing 
 # Author
 
 **typeform-export-excel** © [Liran Tal](https://github.com/lirantal), Released under the [Apache-2.0](./LICENSE) License.
+
+## Documentation
+
+- [Project documentation](./docs/README.md) - development, testing, architecture, and conventions.
