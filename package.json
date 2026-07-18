@@ -80,7 +80,7 @@
     "lint-staged": "^8.1.0",
     "opn-cli": "^4.0.0",
     "prettier-standard": "^8.0.1",
-    "semantic-release": "^15.13.1"
+    "semantic-release": "25.0.3"
   },
   "jest": {
     "testEnvironment": "node",
