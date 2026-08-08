@@ -97,6 +97,8 @@ module.exports = class TypeformExportExcel {
             }
           }
         })
+      } else {
+        throw error
       }
     }
 
@@ -107,7 +109,9 @@ module.exports = class TypeformExportExcel {
   }
 
   _getWorksheetName(questionData) {
-    return questionData.title.substring(0, WORKSHEET_NAME_CHAR_LIMIT - 1)
+    return questionData.title
+      .replace(/[*?:/\\[\]]/g, '')
+      .substring(0, WORKSHEET_NAME_CHAR_LIMIT - 1)
   }
 
   _getWorksheetColor() {
