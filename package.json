@@ -1,6 +1,6 @@
 {
   "name": "typeform-export-excel",
-  "version": "0.0.0-development",
+  "version": "1.1.13",
   "description": "Export a Typeform survey questionnaire to an Excel format",
   "main": "index.js",
   "bin": {
