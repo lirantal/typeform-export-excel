@@ -10,7 +10,6 @@
   <a href="https://www.npmjs.org/package/typeform-export-excel"><img src="https://badgen.net/npm/v/typeform-export-excel"alt="npm version"/></a>
   <a href="https://www.npmjs.org/package/typeform-export-excel"><img src="https://badgen.net/npm/license/typeform-export-excel"alt="license"/></a>
   <a href="https://www.npmjs.org/package/typeform-export-excel"><img src="https://badgen.net/npm/dt/typeform-export-excel"alt="downloads"/></a>
-  <a href="https://github.com/nodejs/security-wg/blob/master/processes/responsible_disclosure_template.md"><img src="https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg" alt="Security Responsible Disclosure"/></a>
 </p>
 
 <p align="center">
