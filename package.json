@@ -85,7 +85,7 @@
     "lint-staged": "^17.6.0",
     "markdownlint-cli": "0.49.1",
     "opn-cli": "^5.0.0",
-    "prettier-standard": "^8.0.1"
+    "prettier-standard": "^16.4.1"
   },
   "jest": {
     "testEnvironment": "node",
