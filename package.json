@@ -68,7 +68,7 @@
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-plugin-transform-strict-mode": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "commitizen": "^3.0.5",
+    "commitizen": "^4.3.2",
     "cz-conventional-changelog": "^3.3.0",
     "docco": "^0.9.2",
     "doxdox": "^3.0.0",
